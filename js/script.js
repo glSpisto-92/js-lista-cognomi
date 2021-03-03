@@ -6,21 +6,21 @@
 
  //1. Chiedo il cognome
  var cognomeUtente = prompt('Inserisci il tuo cognome');
-
+    cognomeUtente = cognomeUtente.toLowerCase();
  //Lista cognomi
- var listaCognomi = ['Bertoldi','Marrazzi','Smusi','Cavacchione','Gastanifrinzi','Rapaponte','Astroboldi'];
+ var listaCognomi = ['bertoldi','marrazzi','smusi','cavacchione','gastanifrinzi','rapaponte','astroboldi'];
 
  //Inserisco il cognome utente nella lista
  listaCognomi.push(cognomeUtente);
-
+    listaCognomi = listaCognomi.sort();
 
 for( var i = 0; i < listaCognomi.length; i ++){
 
-    console.log(listaCognomi.sort()[i]);
+    console.log(listaCognomi[i]);
 }  
 
 // Posizione del cognome aggiunto nella lista
-    console.log('Il signor ' + cognomeUtente + ' è alla posizione numero ' + listaCognomi.indexOf(cognomeUtente));
+    console.log('Il signor ' + cognomeUtente + ' è alla posizione ' + (listaCognomi.indexOf(cognomeUtente)+1));
 
 
 
